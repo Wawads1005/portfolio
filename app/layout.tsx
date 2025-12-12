@@ -23,6 +23,7 @@ import {
 import { Code2Icon, MenuIcon } from "lucide-react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { informations } from "@/data/informations";
+import { Metadata } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,55 @@ const geistMono = Geist_Mono({
 interface RootLayoutProps {
   children?: React.ReactNode;
 }
+
+export const metadata: Metadata = {
+  title: "Jan Joshua De Guzman | Web Developer Portfolio",
+  description:
+    "Portfolio of Jan Joshua De Guzman — a curiosity-driven full-stack JavaScript developer exploring web development, backend systems, and creative technical solutions.",
+  keywords: [
+    "Jan Joshua De Guzman",
+    "Wawads Dev",
+    "Web Developer",
+    "Full Stack Developer",
+    "JavaScript Developer",
+    "Node.js",
+    "React",
+    "Next.js",
+    "Portfolio",
+  ],
+  authors: [{ name: "Jan Joshua De Guzman" }],
+  creator: "Jan Joshua De Guzman",
+  publisher: "Jan Joshua De Guzman",
+
+  openGraph: {
+    title: "Jan Joshua De Guzman | Web Developer Portfolio",
+    description:
+      "Curiosity-driven explorer and full-stack JavaScript developer building clean, thoughtful, and fast digital experiences.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Portfolio OG Image",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Jan Joshua De Guzman | Web Developer Portfolio",
+    description:
+      "Full-stack JavaScript developer and curiosity-driven explorer crafting web applications.",
+    images: ["/og-image.png"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+};
 
 function RootLayout({ children }: RootLayoutProps) {
   return (
