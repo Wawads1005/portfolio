@@ -1,0 +1,44 @@
+import { IconType } from "react-icons";
+import { LuNetwork } from "react-icons/lu";
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiSocketdotio,
+  SiMongodb,
+  SiPostgresql,
+  SiMysql,
+  SiTypescript,
+  SiGithub,
+  SiWebpack,
+  SiVite,
+  SiLinux,
+} from "react-icons/si";
+
+const logos: Record<string, IconType> = {
+  HTML: (props) => SiHtml5({ color: "#E34F26", ...props }),
+  CSS: (props) => SiCss3({ color: "#1572B6", ...props }),
+  JavaScript: (props) => SiJavascript({ color: "#F7DF1E", ...props }),
+  "React.JS/React Native": (props) => SiReact({ color: "#61DAFB", ...props }),
+  "Next.JS": (props) => SiNextdotjs({ color: "#FFFFFF", ...props }),
+  Tailwindcss: (props) => SiTailwindcss({ color: "#38BDF8", ...props }),
+  "Node.JS": (props) => SiNodedotjs({ color: "#68A063", ...props }),
+  "Express.JS": (props) => SiExpress({ color: "#FFFFFF", ...props }),
+  "Socket.io": (props) => SiSocketdotio({ color: "#010101", ...props }),
+  MongoDB: (props) => SiMongodb({ color: "#47A248", ...props }),
+  Postgresql: (props) => SiPostgresql({ color: "#336791", ...props }),
+  SQL: (props) => SiMysql({ color: "#00618A", ...props }),
+  TypeScript: (props) => SiTypescript({ color: "#3178C6", ...props }),
+  "Git & Github": (props) => SiGithub({ color: "#FFFFFF", ...props }),
+  Webpack: (props) => SiWebpack({ color: "#8DD6F9", ...props }),
+  Vite: (props) => SiVite({ color: "#646CFF", ...props }),
+  Networking: LuNetwork,
+  "Linux OS Distro": (props) => SiLinux({ color: "#FCC624", ...props }),
+};
+
+export { logos };
