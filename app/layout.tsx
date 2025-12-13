@@ -3,27 +3,11 @@ import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { AppTheme } from "@/components/globals/app-theme";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-import { navigationLinks } from "@/data/navigation-links";
 import Link from "next/link";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Code2Icon, MenuIcon } from "lucide-react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Code2Icon } from "lucide-react";
 import { informations } from "@/data/informations";
 import { Metadata } from "next";
+import { AppNavigation } from "@/components/globals/app-navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -101,69 +85,15 @@ function RootLayout({ children }: RootLayoutProps) {
         <AppTheme attribute="class" defaultTheme="dark" enableSystem={false}>
           <header className="border-border/30 bg-background/95 supports-backdrop-filter:bg-background/75 fixed inset-x-0 top-0 z-50 h-16 w-full border-b px-4 md:px-8">
             <div className="container mx-auto flex h-full items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Code2Icon className="text-accent-foreground h-6 w-6" />
-                <span className="font-mono text-sm font-medium">
-                  @wawads.dev
-                </span>
+              <div>
+                <Link href="/" className="flex items-center gap-2">
+                  <Code2Icon className="text-accent-foreground h-6 w-6" />
+                  <span className="font-mono text-sm font-medium">
+                    @wawads.dev
+                  </span>
+                </Link>
               </div>
-              <NavigationMenu className="hidden md:flex">
-                <NavigationMenuList>
-                  {navigationLinks.map((navigationLink) => {
-                    const isContact = navigationLink.label === "Contact";
-
-                    return (
-                      <NavigationMenuItem key={navigationLink.href}>
-                        <NavigationMenuLink
-                          className={
-                            isContact
-                              ? buttonVariants({ variant: "default" })
-                              : navigationMenuTriggerStyle()
-                          }
-                          asChild
-                        >
-                          <Link href={navigationLink.href}>
-                            {navigationLink.label}
-                          </Link>
-                        </NavigationMenuLink>
-                      </NavigationMenuItem>
-                    );
-                  })}
-                </NavigationMenuList>
-              </NavigationMenu>
-              <Sheet>
-                <SheetTrigger className="block md:hidden" asChild>
-                  <Button variant="outline">
-                    <MenuIcon />
-                  </Button>
-                </SheetTrigger>
-                <SheetContent>
-                  <SheetHeader>
-                    <SheetTitle>Navigation Menu</SheetTitle>
-                    <SheetDescription>
-                      To navigate the page click the link below.
-                    </SheetDescription>
-                  </SheetHeader>
-                  <div className="p-4 pt-0">
-                    <nav>
-                      <ul className="grid gap-4">
-                        {navigationLinks.map((navigationLink) => {
-                          return (
-                            <li
-                              key={navigationLink.href}
-                              className="text-sm font-medium"
-                            >
-                              <a href={navigationLink.href}>
-                                {navigationLink.label}
-                              </a>
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </nav>
-                  </div>
-                </SheetContent>
-              </Sheet>
+              <AppNavigation />
             </div>
           </header>
           <main>{children}</main>
