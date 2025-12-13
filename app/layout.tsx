@@ -50,7 +50,7 @@ export const metadata: Metadata = {
       "Curiosity-driven explorer and full-stack JavaScript developer building clean, thoughtful, and fast digital experiences.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og_image.png",
         width: 1200,
         height: 630,
         alt: "Portfolio OG Image",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: "Jan Joshua De Guzman | Web Developer Portfolio",
     description:
       "Full-stack JavaScript developer and curiosity-driven explorer crafting web applications.",
-    images: ["/og-image.png"],
+    images: ["/og_image.png"],
   },
 
   icons: {
