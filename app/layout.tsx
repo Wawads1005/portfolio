@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
-import { cn } from "@/lib/utils";
+import { cn, getBaseUrl } from "@/lib/utils";
 import { AppTheme } from "@/components/globals/app-theme";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import Link from "next/link";
@@ -24,6 +24,7 @@ interface RootLayoutProps {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(getBaseUrl()),
   title: "Jan Joshua De Guzman | Web Developer Portfolio",
   description:
     "Portfolio of Jan Joshua De Guzman — a curiosity-driven full-stack JavaScript developer exploring web development, backend systems, and creative technical solutions.",
