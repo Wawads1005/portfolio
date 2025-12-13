@@ -44,6 +44,7 @@ export const metadata: Metadata = {
   publisher: "Jan Joshua De Guzman",
 
   openGraph: {
+    url: getBaseUrl(),
     title: "Jan Joshua De Guzman | Web Developer Portfolio",
     description:
       "Curiosity-driven explorer and full-stack JavaScript developer building clean, thoughtful, and fast digital experiences.",
