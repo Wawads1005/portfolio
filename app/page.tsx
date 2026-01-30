@@ -16,6 +16,7 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import { SiGithub, SiGmail, SiLinkedin } from "react-icons/si";
 import { Spotlight } from "@/components/ui/spotlight";
 import { informations } from "@/data/informations";
+import Link from "next/link";
 
 export default function HomePage() {
   const [mounted, setMounted] = React.useState(false);
@@ -26,6 +27,12 @@ export default function HomePage() {
 
   const allSkills = Object.entries(skills).flatMap(([category, items]) =>
     items.map((skill) => ({ skill, category })),
+  );
+
+  const allProjectsExperiences = React.useMemo(
+    () =>
+      mounted ? projects.toSorted(() => Math.random() - 0.5).slice(0, 3) : [],
+    [mounted],
   );
 
   return (
@@ -126,14 +133,19 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 md:auto-rows-auto md:grid-cols-2">
-            {projects.map((project, index) => (
-              <ProjectCard
-                key={project.title}
-                project={project}
-                className={index === 2 ? "md:col-span-2" : ""}
-              />
-            ))}
+          <div className="grid place-items-center gap-6">
+            <div className="grid grid-cols-1 gap-4 md:auto-rows-auto md:grid-cols-2">
+              {allProjectsExperiences.map((project, index) => (
+                <ProjectCard
+                  key={project.title}
+                  project={project}
+                  className={index === 2 ? "md:col-span-2" : ""}
+                />
+              ))}
+            </div>
+            <Button asChild variant="link">
+              <Link href="/projects-experiences">See more...</Link>
+            </Button>
           </div>
         </div>
       </section>

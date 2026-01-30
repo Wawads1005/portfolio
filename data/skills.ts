@@ -9,8 +9,8 @@ const skills = {
   ],
   Backend: ["Node.JS", "Express.JS", "Socket.io"],
   Database: ["MongoDB", "Postgresql", "SQL"],
-  Tools: ["TypeScript", "Git & Github", "Webpack", "Vite"],
-  Others: ["Networking", "Linux OS Distro"],
+  Tools: ["TypeScript", "Git & Github", "Webpack", "Vite", "Docker", "Traefik"],
+  Others: ["Networking", "Linux OS Distro", "Pi-Hole", "AdGuard"],
 };
 
 export { skills };

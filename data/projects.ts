@@ -35,6 +35,19 @@ const projects: Portfolio.Project[] = [
       "Improved OCR accuracy",
     ],
   },
+  {
+    title: "Self-Hosted AdGuard & Traefik Network",
+    coverImage: "/traefik.png",
+    description:
+      "Set up a secure, self-hosted DNS and reverse proxy system using AdGuardHome, Traefik, and Docker. Configured wildcard certificates, DNS rewrites, and network routing to manage multiple local services efficiently.",
+    tech: ["Docker", "Traefik", "AdGuard", "Linux OS Distro", "Networking"],
+    highlights: [
+      "Implemented DNS rewriting for local services",
+      "Configured Traefik with wildcard SSL certificates",
+      "Managed multiple services using Docker Compose",
+      "Improved network security and ad-blocking",
+    ],
+  },
 ];
 
 export { projects };

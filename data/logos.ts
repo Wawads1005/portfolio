@@ -18,6 +18,10 @@ import {
   SiWebpack,
   SiVite,
   SiLinux,
+  SiPihole,
+  SiAdguard,
+  SiDocker,
+  SiTraefikproxy,
 } from "react-icons/si";
 
 const logos: Record<string, IconType> = {
@@ -39,6 +43,10 @@ const logos: Record<string, IconType> = {
   Vite: (props) => SiVite({ color: "#646CFF", ...props }),
   Networking: LuNetwork,
   "Linux OS Distro": (props) => SiLinux({ color: "#FCC624", ...props }),
+  "Pi-Hole": (props) => SiPihole({ color: "#E04F5F", ...props }),
+  AdGuard: (props) => SiAdguard({ color: "#2AB662", ...props }),
+  Docker: (props) => SiDocker({ color: "#2496ED", ...props }),
+  Traefik: (props) => SiTraefikproxy({ color: "#42B883", ...props }),
 };
 
 export { logos };
