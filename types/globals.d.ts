@@ -5,6 +5,7 @@ declare namespace Portfolio {
     description: string;
     tech: string[];
     highlights: string[];
+    links: NavigationLink[];
   }
 
   interface NavigationLink {

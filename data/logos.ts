@@ -47,6 +47,7 @@ const logos: Record<string, IconType> = {
   AdGuard: (props) => SiAdguard({ color: "#2AB662", ...props }),
   Docker: (props) => SiDocker({ color: "#2496ED", ...props }),
   Traefik: (props) => SiTraefikproxy({ color: "#42B883", ...props }),
+  Github: (props) => SiGithub({ color: "#FFFFFF", ...props }),
 };
 
 export { logos };

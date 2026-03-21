@@ -10,6 +10,10 @@ const projects: Portfolio.Project[] = [
       "Integrated map navigation",
       "Contact & reservation system",
     ],
+    links: [
+      { label: "Github", href: "https:///github.com/Wawads1005/coffee-shop/" },
+      { label: "Demo", href: "https://coffee-shop-tau-flax.vercel.app/" },
+    ],
   },
   {
     title: "Manga Reading App",
@@ -22,6 +26,7 @@ const projects: Portfolio.Project[] = [
       "Filter by type, genre & popularity",
       "Virtualization & offset pagination",
     ],
+    links: [],
   },
   {
     title: "Vehicle Parking Detection System",
@@ -34,6 +39,7 @@ const projects: Portfolio.Project[] = [
       "Fixed manual cropping calculations",
       "Improved OCR accuracy",
     ],
+    links: [],
   },
   {
     title: "Self-Hosted AdGuard & Traefik Network",
@@ -47,6 +53,7 @@ const projects: Portfolio.Project[] = [
       "Managed multiple services using Docker Compose",
       "Improved network security and ad-blocking",
     ],
+    links: [],
   },
 ];
 
