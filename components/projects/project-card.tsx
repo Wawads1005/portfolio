@@ -28,7 +28,7 @@ function ProjectCard({ project, className, ...props }: ProjectCardProps) {
         />
         <div className="from-background via-background/50 absolute inset-0 bg-linear-to-t to-transparent" />
       </div>
-      <CardContent className="space-y-6">
+      <CardContent className="flex-1 space-y-6">
         <div>
           <div className="mb-4 flex items-start justify-between gap-4">
             <h3 className="group-hover:text-accent-foreground text-2xl font-bold transition-colors">
