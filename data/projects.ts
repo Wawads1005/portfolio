@@ -63,6 +63,35 @@ const projects: Portfolio.Project[] = [
     ],
     links: [],
   },
+  {
+    title: "2048 Game",
+    coverImage: "/play_2048.jpg",
+    description:
+      "Built a browser-based 2048 game with tile movement, merge logic, score progression, keyboard controls, and undo/redo history. Focused on recreating the core gameplay experience while handling grid state, movement rules, and responsive visual feedback.",
+    tech: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Custom Hooks",
+      "Keyboard Events",
+    ],
+    highlights: [
+      "Implemented tile movement and merge mechanics",
+      "Added undo and redo history tracking",
+      "Handled keyboard controls for smooth gameplay",
+      "Built responsive board and tile UI",
+    ],
+    links: [
+      {
+        href: "https://2048-omega-six.vercel.app/",
+        label: "Demo",
+      },
+      {
+        href: "https://github.com/Wawads1005/2048",
+        label: "Github",
+      },
+    ],
+  },
 ];
 
 export { projects };
