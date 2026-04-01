@@ -1,3 +1,4 @@
+import { CIcon } from "@/components/icons/c";
 import { IconType } from "react-icons";
 import { LuNetwork } from "react-icons/lu";
 import {
@@ -48,6 +49,7 @@ const logos: Record<string, IconType> = {
   Docker: (props) => SiDocker({ color: "#2496ED", ...props }),
   Traefik: (props) => SiTraefikproxy({ color: "#42B883", ...props }),
   Github: (props) => SiGithub({ color: "#FFFFFF", ...props }),
+  C: (props) => CIcon({ ...props }),
 };
 
 export { logos };

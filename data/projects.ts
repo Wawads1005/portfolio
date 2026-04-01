@@ -92,6 +92,26 @@ const projects: Portfolio.Project[] = [
       },
     ],
   },
+  {
+    title: "Unix-like Shell (C)",
+    coverImage: "/shell.png",
+    description:
+      "Built a minimal Unix-like shell in C to understand process management, system calls, and command execution at a low level. The shell reads user input, parses arguments, handles built-in commands, and spawns child processes to execute programs.",
+    tech: ["C", "POSIX", "Linux", "System Calls", "Process Management"],
+    highlights: [
+      "Implemented command parsing using tokenization",
+      "Spawned child processes using fork and exec",
+      "Handled built-in commands like cd and exit",
+      "Managed process synchronization with wait",
+      "Built interactive shell loop with prompt",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/Wawads1005/shell",
+      },
+    ],
+  },
 ];
 
 export { projects };
